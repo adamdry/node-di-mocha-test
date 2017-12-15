@@ -1,0 +1,26 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {
+    },
+    "rules": {
+        "semicolon": [true, "never"],
+        "quotemark": [true, "single", "avoid-escape"],
+        "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
+        "no-console": [false],
+        "comment-format": [false],
+        "typedef": [true,
+            "call-signature",
+            "parameter",
+            "arrow-parameter",
+            "arrow-call-signature",
+            "property-declaration",
+            "variable-declaration",
+            "member-variable-declaration"
+        ],
+        "no-unused-expression": [false]
+    },
+    "rulesDirectory": []
+}
