@@ -1,14 +1,10 @@
-import {AutoWired, Inject, Singleton} from 'typescript-ioc'
+import { inject, injectable } from 'inversify'
 import FsAsyncFactory from '../fs/FsAsyncFactory'
 
+@injectable()
 export class ConfigHelper {
 
-    @Inject
-    public fsAsyncFactory: FsAsyncFactory
-
-    public testOutput(): void {
-        console.log('### ConfigHelper.testOutput')
-    }
+    @inject private readonly fsAsyncFactory: FsAsyncFactory
 
     // public async primeCacheObj(): Promise<any> {
 

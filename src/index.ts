@@ -3,8 +3,7 @@ import ConfigHelper from './config/ConfigHelper'
 import { FsAsyncFactory } from './fs/FsAsyncFactory'
 
 const configHelper: ConfigHelper = new ConfigHelper()
-configHelper.testOutput()
-console.log(configHelper.fsAsyncFactory)
+//console.log(configHelper.fsAsyncFactory)
 
 // the above console log outputs:
 
