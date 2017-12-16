@@ -1,4 +1,4 @@
-import {AutoWired, Inject} from 'typescript-ioc'
+import {AutoWired, Inject, Singleton} from 'typescript-ioc'
 import FsAsyncFactory from '../fs/FsAsyncFactory'
 
 export class ConfigHelper {

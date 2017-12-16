@@ -1,5 +1,6 @@
-import { setInterval } from 'timers'
+import 'reflect-metadata'
 import ConfigHelper from './config/ConfigHelper'
+import { FsAsyncFactory } from './fs/FsAsyncFactory'
 
 const configHelper: ConfigHelper = new ConfigHelper()
 configHelper.testOutput()
@@ -7,6 +8,7 @@ console.log(configHelper.fsAsyncFactory)
 
 // the above console log outputs:
 
+// ### ConfigHelper.testOutput
 // .../internalprojects/node-di-mocha-test/node_modules/typescript-ioc/es5.js:137
 // throw new TypeError('Invalid type requested to IoC ' +
 // ^

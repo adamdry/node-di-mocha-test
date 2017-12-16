@@ -17,10 +17,11 @@
     "bluebird": "^3.5.1",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.2.3",
+    "inversify": "^4.7.0",
     "nodemon": "^1.12.7",
+    "reflect-metadata": "^0.1.10",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.1",
-    "typescript-ioc": "^1.0.2"
+    "typescript": "^2.6.1"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.18",
@@ -40,6 +41,7 @@
     "testOnly": "mocha -r ts-node/register src/**/*.spec.ts -g $1",
     "gulp": "gulp",
     "gulpbuild": "gulp scripts",
-    "tslint": "tslint --project tsconfig.json"
+    "tslint": "tslint --project tsconfig.json",
+    "clean": "rm rf ./dist"
   }
 }
