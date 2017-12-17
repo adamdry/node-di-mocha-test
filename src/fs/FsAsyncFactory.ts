@@ -1,9 +1,10 @@
 import * as BB from 'bluebird'
 import * as fs from 'fs'
 import { inject, injectable } from 'inversify'
+import { IFsAsyncFactory } from './IFsAsyncFactory'
 
 @injectable()
-export class FsAsyncFactory {
+export class FsAsyncFactory implements IFsAsyncFactory {
 
     private fsAsync: any = null
 

@@ -1,10 +1,12 @@
 const TYPES: {
     // this is for intellisense
-    ConfigHelper: symbol,
-    IFsAsyncFactory: symbol
+    IConfigHelper: symbol,
+    IFsAsyncFactory: symbol,
+    IRedisAdapter: symbol
 } = {
-    ConfigHelper: Symbol.for('ConfigHelper'),
-    IFsAsyncFactory: Symbol.for('IFsAsyncFactory')
+    IConfigHelper: Symbol.for('IConfigHelper'),
+    IFsAsyncFactory: Symbol.for('IFsAsyncFactory'),
+    IRedisAdapter: Symbol.for('IRedisAdapter')
 }
 
 export { TYPES }
