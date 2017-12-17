@@ -1,21 +1,20 @@
 import { inject, injectable } from 'inversify'
+import { TYPES } from '../di/types'
 import FsAsyncFactory from '../fs/FsAsyncFactory'
 
 @injectable()
 export class ConfigHelper {
 
-    @inject private readonly fsAsyncFactory: FsAsyncFactory
+    @inject(TYPES.IFsAsyncFactory)
+    private readonly fsAsyncFactory: FsAsyncFactory
 
-    // public async primeCacheObj(): Promise<any> {
+    public async primeCacheObj(): Promise<any> {
 
-    //     //const fsAsyncFactory: IFsAsyncFactory = new FsAsyncFactory()
-    //     //const fsAsyncFactory: IFsAsyncFactory = Di.container.get<IFsAsyncFactory>(Di.TYPES.IFsAsyncFactory)
+        const fsAsync: any = this.fsAsyncFactory.getFsAsync()
+        const fileContents: string = await fsAsync.readFileAsync('./testData/testFile.json')
 
-    //     const fsAsync: any = this.fsAsyncFactory.getFsAsync()
-    //     const fileContents: string = await fsAsync.readFileAsync('./testData/testFile.json')
-
-    //     return JSON.parse(fileContents)
-    // }
+        return JSON.parse(fileContents)
+    }
 
 }
 
