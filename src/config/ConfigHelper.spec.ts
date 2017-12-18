@@ -31,7 +31,7 @@ describe('ConfigHelper primeCacheObj', () => {
         //    I decided to not implement the interface as adding to the interface
         //      will require me to update all the tests that mock that class
         @injectable()
-        class FsAsyncFactoryStub {
+        class FsAsyncFactoryStub implements IFsAsyncFactory {
             public getFsAsync(): any {
                 return {
                     readFileAsync: async (): Promise<string> => {
@@ -49,9 +49,9 @@ describe('ConfigHelper primeCacheObj', () => {
         }
 
         const fsAsyncFactoryStub2: IMock<IFsAsyncFactory> = TypeMoq.Mock.ofType<IFsAsyncFactory>()
+        decorate(injectable(), fsAsyncFactoryStub2.object.constructor)
         const fsAsync: any = fsAsyncFactoryStub2.object.getFsAsync()
         console.log('@@@ fsAsync: ', fsAsync)
-        decorate(injectable(), fsAsyncFactoryStub2.object.constructor)
 
         // create stubbed RedisAdapter
         // @injectable()
