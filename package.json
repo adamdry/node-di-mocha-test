@@ -19,8 +19,9 @@
     "gulp-typescript": "^3.2.3",
     "nodemon": "^1.12.7",
     "tslint": "^5.8.0",
+    "typemoq": "^2.1.0",
     "typescript": "^2.6.1",
-    "typescript-ioc": "^1.0.2"
+    "typescript-ioc": "^1.2.3"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.18",

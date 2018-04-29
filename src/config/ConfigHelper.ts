@@ -1,5 +1,6 @@
 import {AutoWired, Inject} from 'typescript-ioc'
 import FsAsyncFactory from '../fs/FsAsyncFactory'
+import * as TypeMoq from 'typemoq'
 
 export class ConfigHelper {
 
@@ -10,16 +11,16 @@ export class ConfigHelper {
         console.log('### ConfigHelper.testOutput')
     }
 
-    // public async primeCacheObj(): Promise<any> {
+    public async primeCacheObj(): Promise<string> {
 
-    //     //const fsAsyncFactory: IFsAsyncFactory = new FsAsyncFactory()
-    //     //const fsAsyncFactory: IFsAsyncFactory = Di.container.get<IFsAsyncFactory>(Di.TYPES.IFsAsyncFactory)
+        //const fsAsyncFactory: IFsAsyncFactory = new FsAsyncFactory()
+        //const fsAsyncFactory: IFsAsyncFactory = Di.container.get<IFsAsyncFactory>(Di.TYPES.IFsAsyncFactory)
 
-    //     const fsAsync: any = this.fsAsyncFactory.getFsAsync()
-    //     const fileContents: string = await fsAsync.readFileAsync('./testData/testFile.json')
+        const fsAsync: any = this.fsAsyncFactory.getFsAsync()
+        const fileContents: string = await fsAsync.readFileAsync('./testData/testFile.json')
 
-    //     return JSON.parse(fileContents)
-    // }
+        return JSON.parse(fileContents)
+    }
 
 }
 

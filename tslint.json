@@ -20,7 +20,8 @@
             "variable-declaration",
             "member-variable-declaration"
         ],
-        "no-unused-expression": [false]
+        "no-unused-expression": [false],
+        "ordered-imports": false
     },
     "rulesDirectory": []
 }
